@@ -127,7 +127,7 @@ class: text-center
 >
   <carbon:launch /> Configurando o KIRO
 </a>
-<SkipButton :to="11" label="⏭ Pular Tutorial" /></div>
+<SkipButton :to="15" label="⏭ Pular Tutorial" /></div>
 
 
 <!--
