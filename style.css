@@ -1,0 +1,95 @@
+/* ===========================================================
+   Paleta de cores oficial do Kiro
+   Extraída dos assets do Kiro.app
+   =========================================================== */
+:root {
+  --kiro-purple:        #8041E6; /* roxo primário (marca)      */
+  --kiro-purple-light:  #A78BFA; /* roxo claro / accent        */
+  --kiro-purple-deep:   #5B21B6; /* roxo profundo              */
+  --kiro-ink:           #0E0A1A; /* fundo escuro (quase preto) */
+  --kiro-ink-2:         #17122B; /* superfície elevada         */
+  --kiro-surface:       #211A3A; /* cartões                    */
+  --kiro-border:        #3A2E5C; /* bordas sutis               */
+  --kiro-text:          #ECEAF5; /* texto principal            */
+  --kiro-text-dim:      #A79FC4; /* texto secundário           */
+  --kiro-gold:          #CCA700; /* destaque (avisos/dicas)    */
+  --kiro-green:         #89D185; /* sucesso                    */
+}
+
+/* Fundo e texto base de todos os slides */
+.slidev-layout {
+  background-color: var(--kiro-ink);
+  color: var(--kiro-text);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  color: var(--kiro-text);
+}
+
+/* Títulos com gradiente de marca */
+.slidev-layout h1 {
+  background-image: linear-gradient(92deg, var(--kiro-purple-light) 0%, var(--kiro-purple) 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slidev-layout a { color: var(--kiro-purple-light); }
+
+.slidev-layout code {
+  background-color: var(--kiro-ink-2);
+  color: var(--kiro-purple-light);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+/* Barra de progresso / accents do tema */
+:root {
+  --slidev-theme-primary: #8041E6;
+}
+
+/* Utilitários de marca reutilizáveis nos slides */
+.kiro-accent  { color: var(--kiro-purple-light); }
+.kiro-dim     { color: var(--kiro-text-dim); }
+.kiro-card {
+  background-color: var(--kiro-surface);
+  border: 1px solid var(--kiro-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+.kiro-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--kiro-ink-2);
+  border: 1px solid var(--kiro-border);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--kiro-purple-light);
+}
+.kiro-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--kiro-purple), var(--kiro-purple-deep));
+  color: #fff;
+  font-weight: 700;
+  flex: none;
+}
+
+/* Moldura circular da foto do instrutor (serve de placeholder também) */
+.kiro-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background-color: var(--kiro-ink-2);
+  border: 3px solid var(--kiro-purple);
+  box-shadow: 0 0 0 6px rgba(128, 65, 230, 0.15);
+  overflow: hidden;
+}
