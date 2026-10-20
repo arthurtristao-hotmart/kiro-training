@@ -62,8 +62,6 @@ layout: center
 </div>
 </div>
 
-
-
 ---
 layout: center
 class: text-center
@@ -127,8 +125,7 @@ class: text-center
 >
   <carbon:launch /> Configurando o KIRO
 </a>
-<SkipButton :to="15" label="⏭ Pular Tutorial" /></div>
-
+<SkipButton :to="14" label="⏭ Pular Tutorial" /></div>
 
 <!--
 Esta parte segue o fluxo oficial da Hotmart: o acesso ao Kiro é concedido via
@@ -366,21 +363,6 @@ configuração está errada — revise (ver próximo slide de erros).
 
 ---
 
-# ✅ Checklist Final
-
-<div class="max-w-4xl mx-auto mt-2 kiro-dim">
-Seguindo este fluxo, a instalação e a configuração do KIRO ficam padronizadas e alinhadas às diretrizes de segurança e acesso da Hotmart. Antes de iniciar o uso, confirme:
-</div>
-
-<div class="grid grid-cols-1 gap-3 mt-6 max-w-4xl mx-auto">
-  <div class="kiro-card flex items-center gap-3"><carbon:checkbox-checked class="text-[var(--kiro-green)]" /> Solicitar o acesso ao KIRO pelo <b>IT Service Desk</b>.</div>
-  <div class="kiro-card flex items-center gap-3"><carbon:checkbox-checked class="text-[var(--kiro-green)]" /> Verificar no OKTA/AWS se o perfil <b>Amazon-Kiro-Pro-Plus</b> está disponível na conta <b>buildstaging</b>.</div>
-  <div class="kiro-card flex items-center gap-3"><carbon:checkbox-checked class="text-[var(--kiro-green)]" /> Instalar e configurar a IDE/CLI conforme as etapas.</div>
-  <div class="kiro-card flex items-center gap-3"><carbon:checkbox-checked class="text-[var(--kiro-green)]" /> Confirmar no perfil da IDE a mensagem <b>Signed in with AWS IAM Identity Center</b>.</div>
-</div>
-
----
-
 # ❌ Possíveis erros
 
 <div class="grid grid-cols-2 gap-8 mt-4">
@@ -476,7 +458,6 @@ um MCP conecta ao Neon, um Power ensina a usar bem o Neon, uma Skill define o
 passo-a-passo de uma migração, o Steering garante que tudo siga o padrão do
 time, e um Hook pode rodar os testes automaticamente a cada save.
 -->
-
 
 ---
 
@@ -582,146 +563,4 @@ código. Em vez de ir direto para a implementação, você acorda com o agente
     <div class="kiro-dim text-sm">Tarefas sequenciadas que os agentes executam.</div>
   </div>
 </div>
-
-<!--
-Explique o porquê: specs reduzem retrabalho, deixam a intenção explícita e
-geram código que corresponde ao que foi especificado.
--->
-
 ---
-
-# O fluxo de uma spec no Kiro
-
-<div class="grid grid-cols-2 gap-8 mt-4">
-<div>
-
-```mermaid {scale: 0.72}
-flowchart TD
-  A[Prompt inicial] --> B[requirements.md]
-  B --> C{Revisar & aprovar}
-  C -->|ajustes| B
-  C -->|ok| D[design.md]
-  D --> E{Revisar & aprovar}
-  E -->|ajustes| D
-  E -->|ok| F[tasks.md]
-  F --> G[Agentes executam tarefas]
-  G --> H[Código + testes]
-```
-
-</div>
-<div>
-
-<div class="kiro-card">
-
-### Arquivos gerados
-
-Cada spec vive em `.kiro/specs/<nome>/`:
-
-- `requirements.md`
-- `design.md`
-- `tasks.md`
-
-</div>
-
-<div class="kiro-card mt-4">
-
-### A regra de ouro
-
-<b>Revisar cada etapa antes de avançar.</b> A spec é um contrato: aprovar
-requirements e design cedo evita retrabalho caro na implementação.
-
-</div>
-
-</div>
-</div>
-
----
-
-# Hands On — vamos fazer juntos
-
-<div class="grid grid-cols-2 gap-8 mt-4">
-<div>
-
-### O exercício
-
-Vamos criar uma spec do zero e deixar o agente implementar:
-
-<div class="flex items-start gap-3 mb-3 mt-4">
-  <span class="kiro-step-num">1</span>
-  <div>Abrir um projeto e iniciar uma <b>nova spec</b>.</div>
-</div>
-<div class="flex items-start gap-3 mb-3">
-  <span class="kiro-step-num">2</span>
-  <div>Descrever a feature em um prompt e gerar os <b>requirements</b>.</div>
-</div>
-<div class="flex items-start gap-3 mb-3">
-  <span class="kiro-step-num">3</span>
-  <div>Revisar, aprovar e avançar para o <b>design</b>.</div>
-</div>
-<div class="flex items-start gap-3 mb-3">
-  <span class="kiro-step-num">4</span>
-  <div>Gerar as <b>tasks</b> e executar com o agente.</div>
-</div>
-<div class="flex items-start gap-3">
-  <span class="kiro-step-num">5</span>
-  <div>Revisar o código e os testes gerados.</div>
-</div>
-
-</div>
-<div>
-
-<div class="kiro-card h-full flex flex-col justify-center">
-
-### Sugestão de feature
-
-Algo pequeno e completo, por exemplo:
-
-<p class="kiro-accent mt-2 font-bold">"Adicionar um endpoint de health check que retorna status e versão da API."</p>
-
-<p class="kiro-dim text-sm mt-4">Simples o bastante para caber no tempo e completo o bastante para passar por requirements, design, tasks, código e testes.</p>
-
-</div>
-
-</div>
-</div>
-
-<!--
-Mão na massa. Convide a turma a acompanhar no próprio Kiro. Vá devagar nas
-aprovações de cada etapa — é o coração do SDD.
--->
-
----
-layout: center
-class: text-center
----
-
-<div class="flex flex-col items-center justify-center h-full">
-  <div class="text-[var(--kiro-purple-light)] mb-4"><KiroMark size="64" /></div>
-  <div class="text-[var(--kiro-text)]"><KiroWordmark :width="240" /></div>
-
-  <div class="mt-8 max-w-2xl">
-
-## Recapitulando
-
-  </div>
-
-  <div class="grid grid-cols-4 gap-3 mt-4 text-sm max-w-4xl">
-    <div class="kiro-chip justify-center">1 · Instalação</div>
-    <div class="kiro-chip justify-center">2 · Autenticação</div>
-    <div class="kiro-chip justify-center">3 · Ferramentas</div>
-    <div class="kiro-chip justify-center">4 · SDD</div>
-  </div>
-
-  <p class="kiro-dim mt-10">Dúvidas? Vamos abrir o Kiro e explorar juntos.</p>
-
-  <div class="mt-4">
-    <a href="https://kiro.dev">kiro.dev</a>
-    <span class="kiro-dim mx-2">·</span>
-    <a href="https://kiro.dev/docs">Documentação</a>
-  </div>
-</div>
-
-<!--
-Fechamento. Recapitule as 4 partes, abra para perguntas e aponte a documentação
-oficial para quem quiser se aprofundar.
--->
