@@ -564,3 +564,47 @@ código. Em vez de ir direto para a implementação, você acorda com o agente
   </div>
 </div>
 ---
+layout: center
+---
+# 🔗 Links Úteis
+
+<div class="grid grid-cols-2 gap-4 mt-6 max-w-4xl mx-auto">
+
+  <a href="https://kiro.dev" target="_blank" class="kiro-card flex items-center gap-3 hover:opacity-80 transition no-underline">
+    <carbon:document class="text-2xl text-[var(--kiro-purple-light)]" />
+    <div>
+      <div class="font-bold text-sm">Site Oficial</div>
+      <div class="kiro-dim text-xs">kiro.dev</div>
+    </div>
+    <carbon:launch class="ml-auto text-sm kiro-dim" />
+  </a>
+
+  <a href="https://kiro.dev/docs" target="_blank" class="kiro-card flex items-center gap-3 hover:opacity-80 transition no-underline">
+    <carbon:book class="text-2xl text-[var(--kiro-purple-light)]" />
+    <div>
+      <div class="font-bold text-sm">Documentação</div>
+      <div class="kiro-dim text-xs">kiro.dev/docs</div>
+    </div>
+    <carbon:launch class="ml-auto text-sm kiro-dim" />
+  </a>
+
+  <a href="https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html" target="_blank" class="kiro-card flex items-center gap-3 hover:opacity-80 transition no-underline">
+  <carbon:document class="text-2xl text-[var(--kiro-purple-light)]" />
+  <div>
+    <div class="font-bold text-sm">SDD — Martin Fowler</div>
+    <div class="kiro-dim text-xs">Artigo de referência sobre Spec-Driven Development</div>
+  </div>
+  <carbon:launch class="ml-auto text-sm kiro-dim" />
+</a>
+
+<a href="https://kiro.dev/docs/guides/learn-by-playing/" target="_blank" class="kiro-card flex items-center gap-3 hover:opacity-80 transition no-underline">
+  <carbon:game-console class="text-2xl text-[var(--kiro-purple-light)]" />
+  <div>
+    <div class="font-bold text-sm">Learn by Playing</div>
+    <div class="kiro-dim text-xs">Guia interativo do Kiro</div>
+  </div>
+  <carbon:launch class="ml-auto text-sm kiro-dim" />
+</a>
+
+
+</div>
